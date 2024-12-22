@@ -29,8 +29,8 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(5003, () => {
-    console.log('Server is running on port 5003');
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
 
 
