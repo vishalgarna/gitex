@@ -68,10 +68,7 @@ exports.update = (req, res, next) => {
     }
 
     stragegiesServices.updateStrategy(params, (err, result) => {
-        if (err) {
-            next(err);
-        }
-
+      
         res.status(200).send({
             message: 'succes',
             data: result
