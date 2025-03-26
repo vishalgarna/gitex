@@ -1,0 +1,12 @@
+name : addingButton
+on : [push , workflow_dispatch]
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name : "great user"
+              run : | 
+               echo "cloning app"
+               echo "${{toJson(github)}}"
+               git clone  https://github.com/${{github.repository}}.git
