@@ -18,8 +18,18 @@ jobs:
                   node-version: "20"
             - name : print node version
               run : node -v
-            # npm install is smae like npm ci (clean install) but ci log file ko dekga ki konsa 
+            # nm install is smae like npm ci (clean install) but ci log file ko dekga ki konsa 
             # version install karna hai aur wow hi install kargega 
             # npm install jo current versionchal raha hoga to wow install karega 
             #  iskiye dependenices ko mangawr karna ek keliye hum npm ci for smooth running 
-            - run : npm ci  
+            - run : npm ci7cd 
+    uploads:
+        needs: test
+        runs-on: ubuntu-latest
+
+        steps:
+            - name : "dpeloy coding"
+              run: echo "hello this side from this side "   
+
+            
+
