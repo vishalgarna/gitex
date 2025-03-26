@@ -52,6 +52,7 @@ async function updateStrategy(params, callback) {
         await StrategiesModel.findByIdAndUpdate(params.strategyId, params)
             .then((response) => {
 
+                
                 if (!response) {
                     return callback({
                         message: 'strstegyid not found for update'

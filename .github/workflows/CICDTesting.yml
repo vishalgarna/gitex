@@ -1,0 +1,13 @@
+name: cicdTesting
+
+on: [push]
+
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "greet-user"
+              run: echo "hello world"
+        
+

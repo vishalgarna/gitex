@@ -66,8 +66,13 @@ exports.update = (req, res, next) => {
         "rules": req.body.rules
 
     }
+    console.log("ud");
+    
 
     stragegiesServices.updateStrategy(params, (err, result) => {
+
+        console.log(result);
+        
       
         res.status(200).send({
             message: 'succes',
