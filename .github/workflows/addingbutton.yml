@@ -6,7 +6,20 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name : "great user"
-              run : | 
-               echo "cloning app"
-               echo "${{toJson(github)}}"
-               git clone  https://github.com/${{github.repository}}.git
+              uses : actions/checkout@v4
+            #   run : | 
+            #    echo "cloning app"
+            #    echo "${{toJson(github)}}"
+            #    git clone  https://github.com/${{github.repository}}.git
+
+            - name : "setup nodejs"
+              uses : actions/setup-node@v3
+              with: 
+                  node-version: "20"
+            - name : print node version
+              run : node -v
+            # npm install is smae like npm ci (clean install) but ci log file ko dekga ki konsa 
+            # version install karna hai aur wow hi install kargega 
+            # npm install jo current versionchal raha hoga to wow install karega 
+            #  iskiye dependenices ko mangawr karna ek keliye hum npm ci for smooth running 
+            - run : npm ci  
