@@ -22,7 +22,7 @@ jobs:
             # version install karna hai aur wow hi install kargega 
             # npm install jo current versionchal raha hoga to wow install karega 
             #  iskiye dependenices ko mangawr karna ek keliye hum npm ci for smooth running 
-            - run : npm ci7cd 
+            - run : npm install
     uploads:
         needs: test
         runs-on: ubuntu-latest
